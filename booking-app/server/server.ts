@@ -3,7 +3,12 @@ import express, { Request, Response } from 'express';
 import * as path from 'path';
 
 const app = express();
+const port = 3000;
 const __dirname: string = path.resolve();
+
+app.get('/', (req: Request, res: Response) => {
+  res.sendFile("Hello World!")
+})
 
 app.listen(3000, () => {
   console.log('Server is running on port 3000');

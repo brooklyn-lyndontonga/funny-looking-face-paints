@@ -1,0 +1,147 @@
+/* Import font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+
+/* Variables */
+:root {
+  --primary-color: #ff6ec7;
+  --secondary-color: #99b7f5;
+  --text-dark: #222;
+  --text-light: #fff;
+  --radius: 16px;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Global styles */
+body {
+  font-family: 'Quicksand', sans-serif;
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-dark);
+  background: var(--bg-default);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo container */
+.logo-container {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 320px;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+/* Logo */
+.logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 0 auto 1rem;
+}
+
+/* Title and tagline */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+p.tagline {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* Buttons */
+.button {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.button:hover {
+  background-color: #ff4da6;
+}
+
+/* Backgrounds */
+.bg-default {
+  background: linear-gradient(
+    135deg,
+    #f8d0ff,
+    #e1cbff,
+    #c4eaff,
+    #c8fff4,
+    #d5ffc4,
+    #fff9c4,
+    #ffd1c4
+  );
+}
+
+.bg-pastel-waves {
+  background: linear-gradient(
+    135deg,
+    #f8d0ff,
+    #e1cbff,
+    #c4eaff,
+    #c8fff4,
+    #d5ffc4,
+    #fff9c4,
+    #ffd1c4
+  );
+}
+
+.bg-bold-stripes {
+  background: repeating-linear-gradient(
+    45deg,
+    #ff5f6d,
+    #ff5f6d 50px,
+    #ffc371 50px,
+    #ffc371 100px,
+    #47cf73 100px,
+    #47cf73 150px,
+    #3aefff 150px,
+    #3aefff 200px
+  );
+}
+
+.bg-bright-wave {
+  background: linear-gradient(
+    to bottom right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+}
+
+.bg-horizontal-rainbow {
+  background: linear-gradient(
+    to right,
+    #0000ff,
+    #00ff00,
+    #ffff00,
+    #ff7f00,
+    #ff0000
+  );
+}

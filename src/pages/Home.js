@@ -1,13 +1,11 @@
 import React from 'react';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 
 function Home() {
   return (
     <>
       <Header />
-      <Navbar />
+      <main>
     <div>
       <h1>Nau Mai!</h1>
       <h2>Welcome to the virtual home of Funny Looking Face Paints</h2>
@@ -17,7 +15,7 @@ function Home() {
     <div>
       {/* about */}
         <h2>Meet the Funny Fullas Behind the Funny Face Paintings</h2>
-        <p>Learn about what makes us Funny! <a href="/about">click here</a></p>
+        <p>Learn about what makes us Funny! <a href="/src/pages/About">click here</a></p>
     </div>
     <div>
       {/* booking */}
@@ -34,7 +32,7 @@ function Home() {
       <h2>Checkout Some of Our Work</h2>
       <img src="/public/content/placeholder.jpeg" alt="Placeholder" />
     </div>
-    <Footer />
+    </main>
       </>
   );
 }

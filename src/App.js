@@ -2,18 +2,21 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 // import the rest of the pages here
+import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
+import About from './pages/About';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-    
-      {/* components/pages link in here - to be built */}
+      <Navbar />
     <main>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bookings" element={<Booking />} />
+        <Route path="/about" element={<About />} />
           {/* 
           About
           Calendar
@@ -22,6 +25,7 @@ function App() {
           */}
         </Routes>
       </main>
+      <Footer />
     </Router>
     );
 }

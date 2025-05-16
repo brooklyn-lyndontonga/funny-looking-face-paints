@@ -6,7 +6,9 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
 import About from './pages/About';
+import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
+import Gallery from './pages/Gallery';
 import Footer from './components/Footer';
 
 function App() {
@@ -18,11 +20,9 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/bookings" element={<Booking />} />
         <Route path="/about" element={<About />} />
+        <Route path="/calendar" element={<Calendar />} />
         <Route path="/contact" element={<Contact />} />
-          {/* 
-          Calendar
-          Gallery 
-          */}
+        <Route path="/gallery" element={<Gallery />} />
         </Routes>
       </main>
       <Footer />

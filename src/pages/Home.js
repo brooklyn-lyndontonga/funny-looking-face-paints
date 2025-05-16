@@ -1,6 +1,7 @@
-import Header from "../components/Header";
-import Navbar from "../components/Navbar";
-
+import React from 'react';
+import Header from '../components/Header';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function Home() {
   return (
@@ -10,27 +11,30 @@ function Home() {
     <div>
       <h1>Nau Mai!</h1>
       <h2>Welcome to the virtual home of Funny Looking Face Paints</h2>
-      <p>Where we make the funniest face in Tairawhiti.</p>
-      <p>Bookings are now open! Click <a href="/bookings">here</a> to make a booking.</p>
+      <p>Where we make the funniest faces in Tairawhiti.</p>
+      <p>Bookings are now open, so secure your spot now!</p>
     </div>
     <div>
       {/* about */}
         <h2>Meet the Funny Fullas Behind the Funny Face Paintings</h2>
+        <p>Learn about what makes us Funny! <a href="/about">click here</a></p>
     </div>
     <div>
       {/* booking */}
         <h2>Book Us For Your Next Party</h2>
-        <p>Lorem ipsum dolor sit amet</p>
+        <p>Chech out our <a href="/src/pages/Calendar">Calendar</a> for available dates</p>
     </div>
     <div>
       {/* contact */}
-      <h2>Get In Touch for More Information</h2>
-      <p>Lorem ipsum dolor sit amet</p>
+      <h2>Get in Touch</h2>
+      <p></p>
     </div>
     <div>
-      {/* Gallery */}
-      <p>Lorem ipsum dolor sit amet</p>
+      {/* gallery */}
+      <h2>Checkout Some of Our Work</h2>
+      <img src="/public/content/placeholder.jpeg" alt="Placeholder" />
     </div>
+    <Footer />
       </>
   );
 }

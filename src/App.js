@@ -2,17 +2,13 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Routes, Route } from 'react-router-dom';
 // import the rest of the pages here
-import Header from './components/Header';
-import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Booking from './pages/Booking';
-
 
 function App() {
   return (
     <Router>
-      <Header />
-      <Navbar />
+    
       {/* components/pages link in here - to be built */}
     <main>
       <Routes>

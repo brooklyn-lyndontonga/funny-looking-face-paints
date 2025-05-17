@@ -10,7 +10,6 @@ import About from './pages/About';
 import Calendar from './pages/Calendar';
 import Contact from './pages/Contact';
 import Gallery from './pages/Gallery';
-import ThankYou from './pages/ThankYou';
 import Footer from './components/Footer';
 
 function App() {
@@ -25,7 +24,6 @@ function App() {
         <Route path="/calendar" element={<Calendar />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/gallery" element={<Gallery />} />
-        <Route path="/thankyou" element={<ThankYou />} />
         </Routes>
       </main>
       <Footer />

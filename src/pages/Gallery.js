@@ -4,10 +4,9 @@ import '../stylesheets/gallery.css';
 
 const Gallery = () => {
   const images = useMemo(() => [
-    { src: '/images/paint1.jpg', alt: 'Butterfly design' },
-    { src: '/images/paint2.jpg', alt: 'Tiger face' },
-    { src: '/images/paint3.jpg', alt: 'Unicorn rainbow' },
-    { src: '/images/paint4.jpg', alt: 'Spiderman mask' },
+    { src: 'src/img/placeholder.jpg', alt: 'Placeholder' },
+    { src: 'src/img/placeholder.jpg', alt: 'Placeholder' },
+    { src: 'src/img/placeholder.jpg', alt: 'Placeholder' },
   ], []);
 
   const [selectedIndex, setSelectedIndex] = useState(null);

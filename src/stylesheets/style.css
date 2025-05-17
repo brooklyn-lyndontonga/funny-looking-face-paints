@@ -1,13 +1,19 @@
 /* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
 
-/* Variables */
+/* Brand Variables */
 :root {
   --primary-color: #ff6ec7;
-  --secondary-color: #99b7f5;
-  --text-dark: #222;
+  --primary-hover: #ff4da6;
+  --accent-color: #99b7f5;
+  --contrast-color: #267f53;
+  --warm-color: #f5793b;
+  --highlight-color: #fcca59;
+  --pop-color: #f296bd;
+  --text-dark: #111;
   --text-light: #fff;
-  --radius: 16px;
+  --radius: 20px;
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
 }
 
 /* Reset */
@@ -17,7 +23,7 @@
   padding: 0;
 }
 
-/* Global styles */
+/* Base Styling */
 body {
   font-family: 'Quicksand', sans-serif;
   text-align: center;
@@ -30,13 +36,13 @@ body {
   align-items: center;
 }
 
-/* Logo container */
+/* Logo Container */
 .logo-container {
-  background: #fff;
+  background: var(--text-light);
   border-radius: var(--radius);
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-  max-width: 320px;
+  padding: 2.5rem 2rem;
+  box-shadow: var(--shadow);
+  max-width: 360px;
   width: 100%;
   margin-bottom: 2rem;
 }
@@ -44,81 +50,69 @@ body {
 /* Logo */
 .logo {
   width: 100%;
-  max-width: 200px;
+  max-width: 220px;
   height: auto;
   display: block;
   margin: 0 auto 1rem;
 }
 
-/* Title and tagline */
+/* Headings & Tagline */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   margin-bottom: 0.5rem;
   color: var(--primary-color);
+  letter-spacing: 1px;
+  font-weight: 700;
 }
 
 p.tagline {
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  color: var(--contrast-color);
+  margin-bottom: 1.25rem;
+  font-weight: 600;
 }
 
 /* Buttons */
 .button {
   background-color: var(--primary-color);
   color: var(--text-light);
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 1.75rem;
   border: none;
   border-radius: var(--radius);
-  font-size: 1rem;
+  font-size: 1.1rem;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.25s ease-in-out;
   text-decoration: none;
+  box-shadow: var(--shadow);
   display: inline-block;
 }
 
 .button:hover {
-  background-color: #ff4da6;
+  background-color: var(--primary-hover);
+  transform: translateY(-2px) scale(1.02);
 }
 
-/* Backgrounds */
+/* Background Styles */
 .bg-default {
-  background: linear-gradient(
-    135deg,
-    #f8d0ff,
-    #e1cbff,
-    #c4eaff,
-    #c8fff4,
-    #d5ffc4,
-    #fff9c4,
-    #ffd1c4
-  );
+  background: linear-gradient(135deg, #f8d0ff, #e1cbff, #c4eaff, #c8fff4, #d5ffc4, #fff9c4, #ffd1c4);
 }
 
 .bg-pastel-waves {
-  background: linear-gradient(
-    135deg,
-    #f8d0ff,
-    #e1cbff,
-    #c4eaff,
-    #c8fff4,
-    #d5ffc4,
-    #fff9c4,
-    #ffd1c4
-  );
+  background: linear-gradient(135deg, #f8d0ff, #e1cbff, #c4eaff, #c8fff4, #d5ffc4, #fff9c4, #ffd1c4);
 }
 
 .bg-bold-stripes {
   background: repeating-linear-gradient(
     45deg,
-    #ff5f6d,
-    #ff5f6d 50px,
-    #ffc371 50px,
-    #ffc371 100px,
-    #47cf73 100px,
-    #47cf73 150px,
-    #3aefff 150px,
-    #3aefff 200px
+    var(--primary-color),
+    var(--primary-color) 50px,
+    var(--warm-color) 50px,
+    var(--warm-color) 100px,
+    var(--contrast-color) 100px,
+    var(--contrast-color) 150px,
+    var(--accent-color) 150px,
+    var(--accent-color) 200px
   );
 }
 

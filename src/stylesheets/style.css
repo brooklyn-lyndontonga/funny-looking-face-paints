@@ -1,19 +1,21 @@
-/* Import font */
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
 
-/* Brand Variables */
 :root {
-  --primary-color: #ff6ec7;
-  --primary-hover: #ff4da6;
-  --accent-color: #99b7f5;
-  --contrast-color: #267f53;
-  --warm-color: #f5793b;
-  --highlight-color: #fcca59;
-  --pop-color: #f296bd;
-  --text-dark: #111;
-  --text-light: #fff;
+  --pink: #fbb6d6;
+  --purple: #c79dff;
+  --lavender: #e4d7fb;
+  --yellow: #fff1a6;
+  --mint: #c6f5d9;
+  --blue: #adddff;
+  --black: #222222;
+  --white: #ffffff;
+
+  --primary-color: var(--pink);
+  --secondary-color: var(--purple);
+  --accent-color: var(--yellow);
+  --bg-color: var(--lavender);
   --radius: 20px;
-  --shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Reset */
@@ -23,119 +25,81 @@
   padding: 0;
 }
 
-/* Base Styling */
+/* Body */
 body {
-  font-family: 'Quicksand', sans-serif;
-  text-align: center;
-  padding: 2rem;
-  color: var(--text-dark);
-  background: var(--bg-default);
+  font-family: 'Fredoka', sans-serif;
+  background: linear-gradient(
+    90deg,
+    var(--pink),
+    var(--yellow),
+    var(--mint),
+    var(--blue),
+    var(--purple)
+  );
+  color: var(--black);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 2rem;
+  text-align: center;
 }
 
-/* Logo Container */
-.logo-container {
-  background: var(--text-light);
-  border-radius: var(--radius);
+/* Content Wrapper (for white contrast) */
+.container {
+  background: var(--white);
   padding: 2.5rem 2rem;
+  border-radius: var(--radius);
   box-shadow: var(--shadow);
-  max-width: 360px;
-  width: 100%;
-  margin-bottom: 2rem;
+  max-width: 800px;
+  width: 90%;
+  margin: 2rem auto;
 }
 
 /* Logo */
 .logo {
   width: 100%;
   max-width: 220px;
-  height: auto;
-  display: block;
-  margin: 0 auto 1rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Headings & Tagline */
+/* Title */
 h1 {
-  font-size: 2.75rem;
-  margin-bottom: 0.5rem;
+  font-size: 3rem;
   color: var(--primary-color);
-  letter-spacing: 1px;
   font-weight: 700;
+  margin-bottom: 0.5rem;
 }
 
+/* Tagline */
 p.tagline {
   font-size: 1.25rem;
-  color: var(--contrast-color);
-  margin-bottom: 1.25rem;
-  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1.5rem;
+  font-weight: 500;
 }
 
-/* Buttons */
+/* Button */
 .button {
   background-color: var(--primary-color);
-  color: var(--text-light);
-  padding: 0.85rem 1.75rem;
+  color: var(--white);
+  padding: 0.9rem 1.8rem;
   border: none;
   border-radius: var(--radius);
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.25s ease-in-out;
   text-decoration: none;
   box-shadow: var(--shadow);
-  display: inline-block;
+  transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
-  background-color: var(--primary-hover);
-  transform: translateY(-2px) scale(1.02);
+  background-color: var(--purple);
+  transform: scale(1.05);
 }
 
-/* Background Styles */
-.bg-default {
-  background: linear-gradient(135deg, #f8d0ff, #e1cbff, #c4eaff, #c8fff4, #d5ffc4, #fff9c4, #ffd1c4);
-}
-
-.bg-pastel-waves {
-  background: linear-gradient(135deg, #f8d0ff, #e1cbff, #c4eaff, #c8fff4, #d5ffc4, #fff9c4, #ffd1c4);
-}
-
-.bg-bold-stripes {
-  background: repeating-linear-gradient(
-    45deg,
-    var(--primary-color),
-    var(--primary-color) 50px,
-    var(--warm-color) 50px,
-    var(--warm-color) 100px,
-    var(--contrast-color) 100px,
-    var(--contrast-color) 150px,
-    var(--accent-color) 150px,
-    var(--accent-color) 200px
-  );
-}
-
-.bg-bright-wave {
-  background: linear-gradient(
-    to bottom right,
-    red,
-    orange,
-    yellow,
-    green,
-    blue,
-    indigo,
-    violet
-  );
-}
-
-.bg-horizontal-rainbow {
-  background: linear-gradient(
-    to right,
-    #0000ff,
-    #00ff00,
-    #ffff00,
-    #ff7f00,
-    #ff0000
-  );
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 10px var(--pink), 0 0 20px var(--purple);
 }

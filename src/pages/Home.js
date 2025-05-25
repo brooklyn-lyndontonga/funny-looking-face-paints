@@ -10,7 +10,7 @@ function Home() {
     <>
       <Header />
       <main>
-    <div class='container'> 
+    <div className='container'> 
       <h1>Nau Mai!</h1>
       <h2>Welcome to the home of Funny Looking Face Paints</h2>
       <img className="bannerImg" src={logo} alt="Logo" />
@@ -24,13 +24,13 @@ function Home() {
   <p>Learn about what makes us Funny!</p> 
     <p><a href="./About">Click here</a></p>
 </div>
-<div class='container1x1'>
+<div className='container1x1'>
   {/* booking */}
   <h2>Book Us For Your Next Party</h2>
   <p>Chech out our <a href="./Calendar">Calendar</a> for available dates</p>
 </div>
 </div>
-    <div class='container'>
+    <div className='container'>
       {/* gallery */}
       <h2>Checkout Some of Our Work</h2>
       <Link to="/gallery">

@@ -6,9 +6,9 @@ import './stylesheets/style.css';
 
 ReactGA4.initialize('105341268528158289615');
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );

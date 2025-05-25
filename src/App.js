@@ -14,12 +14,13 @@ import Terms from './pages/Terms'; // new import
 import Policy from './pages/Policy'; // new import
 import Footer from './components/Footer';
 
+
 function App() {
   return (
     <Router>
       <Navbar />
-    <main>
-      <Routes>
+      <main className="main-content">
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/bookings" element={<Booking />} />
         <Route path="/about" element={<About />} />

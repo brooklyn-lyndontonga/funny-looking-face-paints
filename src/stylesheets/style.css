@@ -72,6 +72,12 @@ body {
   flex-direction: row;
 }
 
+.main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
 /* Title */
 h1 {
@@ -103,6 +109,11 @@ p.tagline {
   margin-bottom: 20px;
 }
 
+.footer {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
 
 /* Button */
 .button {

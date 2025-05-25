@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function About() {
   return (
-    <div class='container'>
+    <div className='container'>
       <div>
       <h1>The Funny Looking Story</h1>
       <p className="paragraph">Kia ora! Ko Brooky ahau — māmā, face painter, and CEO of creativity at Funny Looking Face Paints. My face painting journey started off at my baby’s first birthday when I ordered a set of professional face paints and brushes and thought, “Eh, how hard can it be?”, Famous last words.</p>

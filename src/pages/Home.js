@@ -17,15 +17,18 @@ function Home() {
       <p>Where we make the funniest faces in Tairawhiti.</p>
       <p>Bookings are now open, so secure your spot now!</p>
     </div>
-   <div class='container'>
+    <div className='parent-container'>
+   <div class='container1x1'>
   {/* about */}
   <h2>Meet the Funny Fullas Behind the Funny Face Paintings</h2>
-  <p>Learn about what makes us Funny! <a href="./About">click here</a></p>
+  <p>Learn about what makes us Funny!</p> 
+    <p><a href="./About">Click here</a></p>
 </div>
-<div class='container'>
+<div class='container1x1'>
   {/* booking */}
   <h2>Book Us For Your Next Party</h2>
   <p>Chech out our <a href="./Calendar">Calendar</a> for available dates</p>
+</div>
 </div>
     <div class='container'>
       {/* gallery */}

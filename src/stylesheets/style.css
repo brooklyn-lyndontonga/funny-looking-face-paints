@@ -57,6 +57,22 @@ body {
   margin: 1rem auto;
 }
 
+.container1x1 {
+  background: opacity(75%);
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  flex: 1;
+  margin: 10px; 
+}
+
+.parent-container {
+  display: flex;
+  flex-direction: row;
+}
+
+
 /* Title */
 h1 {
   font-size: 3rem;

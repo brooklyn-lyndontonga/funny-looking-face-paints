@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './stylesheets/style.css';
 import App from './App';
+import ReactGA4 from 'react-ga4';
+import './stylesheets/style.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+ReactGA4.initialize('105341268528158289615');
 
-root.render(
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-

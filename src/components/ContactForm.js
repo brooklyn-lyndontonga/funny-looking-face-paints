@@ -27,35 +27,57 @@ function ContactForm() {
   }
 
   return (
-    <div className="form-wrapper">
-      {!submitted ? (
-        <form onSubmit={handleSubmit}>
-          {/* Honeypot trap */}
-          <input type="text" name="_honey" style={{ display: "none" }} />
-          <input type="hidden" name="_captcha" value="false" />
+  <div className="booking-form-container">
+    {!submitted ? (
+      <form onSubmit={handleSubmit}>
+        {/* Honeypot for bots */}
+        <input type="text" name="_honey" style={{ display: "none" }} />
+        <input type="hidden" name="_captcha" value="false" />
 
+        <div className="form-section">
           <label htmlFor="name">Name:</label>
           <input type="text" id="name" name="name" required />
-          <br />
+        </div>
 
+        <div className="form-section">
+          <label htmlFor="phone">Phone:</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+
+        <div className="form-section">
           <label htmlFor="email">Email:</label>
           <input type="email" id="email" name="email" required />
-          <br />
-
-          <label htmlFor="message">Message:</label>
-          <textarea id="message" name="message" required></textarea>
-          <br />
-
-          <button type="submit">Submit</button>
-        </form>
-      ) : (
-        <div className="thank-you-message">
-          <h2>Ngā mihi!</h2>
-          <p>Your message has been sent to our inbox. We'll be in touch soon!</p>
         </div>
-      )}
-    </div>
-  )
-}
 
+        <div className="form-section">
+          <label htmlFor="date">Date:</label>
+          <input type="date" id="date" name="date" required />
+        </div>
+
+        <div className="form-section">
+          <label htmlFor="time">Time:</label>
+          <input type="time" id="time" name="time" required />
+        </div>
+
+        <div className="form-section">
+          <label htmlFor="location">Location:</label>
+          <input type="text" id="location" name="location" required />
+        </div>
+
+        <div className="form-section">
+          <label htmlFor="message">Tell Us About Your Event:</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+
+        <button type="submit">Submit Booking</button>
+      </form>
+    ) : (
+      <div className="thank-you-message">
+        <h2>Ngā mihi nui!</h2>
+        <p>Your booking has been sent! We'll be in touch very soon to secure and confirm your booking.</p>
+      </div>
+    )}
+  </div>
+);
+}
 export default ContactForm

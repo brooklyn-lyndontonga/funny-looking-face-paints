@@ -1,15 +1,15 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
 
 function Navbar() {
   return (
-    <nav>
+    <nav className='navbar' style={{ textAlign: 'center' }}>
       <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/bookings">Bookings</Link></li>
-        <li><Link to="/about">About</Link></li>
-        <li><Link to="/calendar">Calendar</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/bookings">Bookings</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/calendar">Calendar</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/gallery">Gallery</a></li>
       </ul>
     </nav>
   );

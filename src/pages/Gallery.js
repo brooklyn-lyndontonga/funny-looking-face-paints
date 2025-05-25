@@ -36,7 +36,7 @@ const Gallery = () => {
   }, [nextImage, prevImage, selectedIndex]);
 
   return (
-    <div className="gallery-container">
+    <div className="container">
       <h2>Our Face Painting Gallery</h2>
       <div className="gallery-grid">
         {images.map((img, i) => (

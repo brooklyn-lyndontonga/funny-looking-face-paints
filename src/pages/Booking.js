@@ -1,5 +1,6 @@
 import React from 'react'; 
 import BookingForm from '../components/BookingForm';
+import '../stylesheets/BookingForm.css';
 
 function Bookings() {
   return (
@@ -7,6 +8,8 @@ function Bookings() {
     <div class='container'>
       <h2>Make a Booking</h2>
       <p>Fill out the form below to get on the books and you'll get confirmation in your inbox soon!</p>
+      </div>
+      <div class='container'>
       <BookingForm />
     </div>
     </>

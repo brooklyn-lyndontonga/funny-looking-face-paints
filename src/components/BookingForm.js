@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../stylesheets/BookingForm.css";
 
 function BookingForm() {
   const [submitted, setSubmitted] = useState(false);

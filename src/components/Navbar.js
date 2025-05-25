@@ -1,7 +1,9 @@
 import React from 'react';
+import '../stylesheets/Nav.css';
 
 function Navbar() {
   return (
+    <div className='container'>
     <nav className='navbar' style={{ textAlign: 'center' }}>
       <ul>
         <li><a href="/">Home</a></li>
@@ -12,6 +14,7 @@ function Navbar() {
         <li><a href="/gallery">Gallery</a></li>
       </ul>
     </nav>
+    </div>
   );
 }
 

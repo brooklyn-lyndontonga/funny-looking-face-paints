@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../stylesheets/ContactForm.css";
 
 function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -27,7 +28,7 @@ function ContactForm() {
   }
 
   return (
-  <div className="booking-form-container">
+  <div className="contact-form-container">
     {!submitted ? (
       <form onSubmit={handleSubmit}>
         {/* Honeypot for bots */}
@@ -50,31 +51,18 @@ function ContactForm() {
         </div>
 
         <div className="form-section">
-          <label htmlFor="date">Date:</label>
-          <input type="date" id="date" name="date" required />
-        </div>
-
-        <div className="form-section">
-          <label htmlFor="time">Time:</label>
-          <input type="time" id="time" name="time" required />
-        </div>
-
-        <div className="form-section">
-          <label htmlFor="location">Location:</label>
-          <input type="text" id="location" name="location" required />
-        </div>
-
-        <div className="form-section">
-          <label htmlFor="message">Tell Us About Your Event:</label>
+          <label htmlFor="message">How Can I Help?:</label>
           <textarea id="message" name="message" required></textarea>
         </div>
 
-        <button type="submit">Submit Booking</button>
+        <button type="submit">Send</button>
       </form>
     ) : (
       <div className="thank-you-message">
         <h2>Ngā mihi nui!</h2>
-        <p>Your booking has been sent! We'll be in touch very soon to secure and confirm your booking.</p>
+        <p>Your message has been sent!!</p>
+        <p>Thanks for reaching out to us. I'll get back to you as soon as we can.</p>
+        <p>Checkout our socials for more fun!</p>
       </div>
     )}
   </div>

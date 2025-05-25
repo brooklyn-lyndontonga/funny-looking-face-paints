@@ -1,5 +1,6 @@
-import React from "react";
-import ContactForm from "../components/ContactForm";
+import React from 'react'; 
+import ContactForm from '../components/ContactForm';
+import '../stylesheets/ContactForm.css';
 import Socials from "../components/Socials";
 
 function Contact() {

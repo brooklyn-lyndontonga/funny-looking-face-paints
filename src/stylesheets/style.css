@@ -47,20 +47,14 @@ body {
 
 /* Content Wrapper (for white contrast) */
 .container {
-  background: var(--white);
+  background: opacity(75%);
+  background-color: var(--white);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   max-width: 800px;
-  width: 90%;
-  margin: 2rem auto;
-}
-
-/* Logo */
-.logo {
   width: 100%;
-  max-width: 220px;
-  margin-bottom: 1.5rem;
+  margin: 1rem auto;
 }
 
 /* Title */
@@ -78,6 +72,21 @@ p.tagline {
   margin-bottom: 1.5rem;
   font-weight: 500;
 }
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.section h2 {
+  margin-top: 0;
+}
+.paragraph {
+  margin-bottom: 20px;
+}
+
 
 /* Button */
 .button {
@@ -104,107 +113,28 @@ p.tagline {
   box-shadow: 0 0 10px var(--pink), 0 0 20px var(--purple);
 }
 
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: var(--white);
-  padding: 10px;
+/* Images */
+img {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.navbar ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-.navbar li {
-  margin-right: 20px;
-}
-
-.navbar a {
-  color: var(--soft-pink);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  color: var(--mint-green);
-}
-
-img {
+/* Banner */
+.bannerImg {
+  background-color: #ffffff;
+  background-size: 100%;
+  width: auto;
+  height: 150px;
   display: block;
-  width: 100%;
-  height: auto;
-  margin: 0 auto;
-}
-
-.booking-form-container {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border: 1px solid #ddd;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.booking-form-container form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.booking-form-container label {
-  margin-bottom: 10px;
-  font-weight: bold;
-}
-
-.booking-form-container input, .booking-form-container textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-.booking-form-container button[type="submit"] {
-  background-color: #4CAF50;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.booking-form-container button[type="submit"]:hover {
-  background-color: #3e8e41;
-}
-
-.thank-you-message {
-  text-align: center;
-}
-
-.thank-you-message h2 {
-  margin-bottom: 10px;
-}
-
-.thank-you-message p {
+  margin: 20px auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+  filter: none;
   margin-bottom: 20px;
 }
 
-.section {
-  margin-bottom: 20px;
-  padding: 20px;
-  border-bottom: 1px solid #ccc;
-}
-
-.section h2 {
-  margin-top: 0;
-}
-.paragraph {
-  margin-bottom: 20px;
-}

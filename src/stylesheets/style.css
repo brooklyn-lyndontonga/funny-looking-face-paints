@@ -27,9 +27,11 @@
 }
 
 /* ==== Body ==== */
-body {
+  body {
   font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(90deg, var(--pink), var(--yellow), var(--mint), var(--blue), var(--purple));
+  background: linear-gradient(270deg, var(--pink), var(--yellow), var(--mint), var(--blue), var(--purple), var(--pink));
+  background-size: 1000% 1000%;
+  animation: rainbowFlow 20s ease infinite;
   color: var(--black);
   min-height: 100vh;
   display: flex;
@@ -38,6 +40,7 @@ body {
   padding: 2rem;
   text-align: center;
 }
+
 
 /* ==== Content Wrapper ==== */
 .container {
@@ -328,5 +331,17 @@ img {
 
   .modal-image {
     max-height: 60vh;
+  }
+}
+
+@keyframes rainbowFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import placeholder1 from '../img/Logo/1.png';
 import placeholder2 from '../img/Logo/2.png';
 import placeholder3 from '../img/Logo/3.png';
+import '../stylesheets/Gallery.css';
+
 
 const Gallery = () => {
   const images = useMemo(() => [

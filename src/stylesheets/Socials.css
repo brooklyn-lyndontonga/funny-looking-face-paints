@@ -1,0 +1,9 @@
+.socials-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.socials-list li {
+  margin-bottom: 1rem;
+}

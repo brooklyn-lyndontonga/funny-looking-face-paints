@@ -24,11 +24,6 @@ function Home() {
   <p>Learn about what makes us Funny!</p> 
     <p><a href="./About">Click here</a></p>
 </div>
-<div className='container1x1'>
-  {/* booking */}
-  <h2>Book Us For Your Next Party</h2>
-  <p>Chech out our <a href="./Calendar">Calendar</a> for available dates</p>
-</div>
 </div>
     <div className='container'>
       {/* gallery */}

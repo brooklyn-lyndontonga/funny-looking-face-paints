@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap');
 
+/* ==== Root Variables ==== */
 :root {
   --pink: #fbb6d6;
   --purple: #c79dff;
@@ -18,24 +19,17 @@
   --shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Reset */
+/* ==== Reset ==== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-/* Body */
+/* ==== Body ==== */
 body {
   font-family: 'Fredoka', sans-serif;
-  background: linear-gradient(
-    90deg,
-    var(--pink),
-    var(--yellow),
-    var(--mint),
-    var(--blue),
-    var(--purple)
-  );
+  background: linear-gradient(90deg, var(--pink), var(--yellow), var(--mint), var(--blue), var(--purple));
   color: var(--black);
   min-height: 100vh;
   display: flex;
@@ -45,9 +39,8 @@ body {
   text-align: center;
 }
 
-/* Content Wrapper (for white contrast) */
+/* ==== Content Wrapper ==== */
 .container {
-  background: opacity(75%);
   background-color: var(--white);
   padding: 1.5rem;
   border-radius: var(--radius);
@@ -58,18 +51,22 @@ body {
 }
 
 .container1x1 {
-  background: opacity(75%);
   background-color: var(--white);
   padding: 1.5rem;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   flex: 1;
-  margin: 10px; 
+  margin: 10px;
+  width: calc(50% - 20px);
+  max-width: 100%;
 }
 
+/* ==== Layout ==== */
 .parent-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .main-content {
@@ -79,7 +76,7 @@ body {
   padding: 20px;
 }
 
-/* Title */
+/* ==== Typography ==== */
 h1 {
   font-size: 3rem;
   color: var(--primary-color);
@@ -87,7 +84,6 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
-/* Tagline */
 p.tagline {
   font-size: 1.25rem;
   color: var(--secondary-color);
@@ -95,7 +91,6 @@ p.tagline {
   font-weight: 500;
 }
 
-/* Sections */
 .section {
   margin-bottom: 20px;
   padding: 20px;
@@ -105,17 +100,19 @@ p.tagline {
 .section h2 {
   margin-top: 0;
 }
+
 .paragraph {
   margin-bottom: 20px;
 }
 
+/* ==== Footer ==== */
 .footer {
   background-color: #f0f0f0;
   padding: 20px;
   text-align: center;
 }
 
-/* Button */
+/* ==== Button ==== */
 .button {
   background-color: var(--primary-color);
   color: var(--white);
@@ -140,28 +137,65 @@ p.tagline {
   box-shadow: 0 0 10px var(--pink), 0 0 20px var(--purple);
 }
 
-/* Images */
+/* ==== Images ==== */
 img {
   display: block;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   margin: 20px auto;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Banner */
+/* ==== Banner Image ==== */
 .bannerImg {
-  background-color: #ffffff;
-  background-size: 100%;
-  width: auto;
-  height: 150px;
+  width: 100%;
+  height: auto;
   display: block;
   margin: 20px auto;
   object-fit: cover;
   border-radius: 0;
   box-shadow: none;
   filter: none;
-  margin-bottom: 20px;
 }
 
+/* ==== Responsive Styles ==== */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  p.tagline {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+
+  .parent-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container,
+  .container1x1 {
+    width: 100%;
+    margin: 1rem 0;
+    padding: 1rem;
+  }
+
+  .button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+
+  img,
+  .bannerImg {
+    width: 100%;
+    height: auto;
+  }
+}

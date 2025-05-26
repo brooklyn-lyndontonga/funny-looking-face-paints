@@ -1,9 +1,10 @@
 /* Nav */
 .navbar {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 20px;
+  flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -11,14 +12,24 @@
   margin: 0;
   padding: 0;
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .navbar li {
-  margin: 0 20px;
+  margin: 0;
 }
 
 .navbar a {
   text-decoration: none;
   color: #333;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: var(--lavender); /* or use --accent-color */
 }

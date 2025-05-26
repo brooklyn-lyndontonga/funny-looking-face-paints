@@ -50,12 +50,20 @@ function BookingForm() {
           <input type="date" id="date" name="date" required />
           <br />
 
-          <label htmlFor="time">Time:</label>
-          <input type="time" id="time" name="time" required />
+          <label htmlFor="start-time">Start Time:</label>
+          <input type="time" id="start-time" name="start-time" required />
+          <br />
+
+          <label htmlFor="end-time">End Time:</label>
+          <input type="time" id="end-time" name="end-time" required />
           <br />
 
           <label htmlFor="location">Location:</label>
           <input type="text" id="location" name="location" required />
+          <br />
+
+          <label htmlFor="message">Tell me about your event:</label>
+          <input type="text" id="message" name="message" required />
           <br />
           <button type="submit">Submit</button>
         </form>

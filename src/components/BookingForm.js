@@ -57,18 +57,9 @@ function BookingForm() {
           <label htmlFor="location">Location:</label>
           <input type="text" id="location" name="location" required />
           <br />
-
-          <label htmlFor="message">Tell Us About Your Event:</label>
-          <textarea id="message" name="message" required></textarea>
-          <br />
-
-          <button type="submit">Submit Booking</button>
         </form>
       ) : (
-        <div className="thank-you-message">
-          <h2>Ngā mihi nui!</h2>
-          <p>Your booking has been sent! We'll be in touch very soon to secure and confirm your booking.</p>
-        </div>
+        <p>Thanks for submitting the form!</p>
       )}
     </div>
   );

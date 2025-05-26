@@ -3,7 +3,6 @@ import placeholder1 from '../img/Logo/1.png';
 import placeholder2 from '../img/Logo/2.png';
 import placeholder3 from '../img/Logo/3.png';
 
-
 const Gallery = () => {
   const images = useMemo(() => [
     { src: placeholder1, alt: 'Placeholder 1' },
@@ -17,10 +16,10 @@ const Gallery = () => {
   const closeModal = useCallback(() => setSelectedIndex(null), []);
   const prevImage = useCallback(() => {
     setSelectedIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
-  }, [images, setSelectedIndex]);
+  }, [images]);
   const nextImage = useCallback(() => {
     setSelectedIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
-  }, [images, setSelectedIndex]);
+  }, [images]);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -30,7 +29,6 @@ const Gallery = () => {
         if (e.key === 'Escape') closeModal();
       }
     };
-
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [selectedIndex, prevImage, nextImage, closeModal]);
@@ -48,28 +46,36 @@ const Gallery = () => {
           />
         ))}
       </div>
-       <p>For more content, check out our <a href="https://www.instagram.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Instagram, </a></p>
-       <p> <a href="https://www.facebook.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="https://www.tiktok.com/@funnylookingfacepaints" target="_blank" rel="noopener noreferrer">TikTok</a></p>
-      
-     {selectedIndex !== null && (
-  <div className="modal-overlay" onClick={closeModal}>
-    <div className="modal-window" onClick={(e) => e.stopPropagation()}>
-      <div className="modal-image-container">
-        <button className="prev-button" onClick={prevImage}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <img src={images[selectedIndex].src} alt={images[selectedIndex].alt} className="modal-image" />
-        <button className="next-button" onClick={nextImage}>
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-            <path d="M9 19l7-7-7-7" />
-          </svg>
-        </button>
-      </div>
-    </div>
-  </div>
-)}
+
+      <p>For more content, check out our <a href="https://www.instagram.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Instagram,</a></p>
+      <p><a href="https://www.facebook.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="https://www.tiktok.com/@funnylookingfacepaints" target="_blank" rel="noopener noreferrer">TikTok</a></p>
+
+      {selectedIndex !== null && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-window" onClick={(e) => e.stopPropagation()}>
+            <button className="close-button" onClick={closeModal}>
+              &times;
+            </button>
+            <div className="modal-image-container">
+              <button className="prev-button" onClick={prevImage}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <img
+                src={images[selectedIndex].src}
+                alt={images[selectedIndex].alt}
+                className="modal-image"
+              />
+              <button className="next-button" onClick={nextImage}>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M9 19l7-7-7-7" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

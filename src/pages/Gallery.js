@@ -5,6 +5,7 @@ import placeholder3 from '../img/Logo/3.png';
 import '../stylesheets/Gallery.css';
 
 
+
 const Gallery = () => {
   const images = useMemo(() => [
     { src: placeholder1, alt: 'Placeholder 1' },

@@ -49,6 +49,9 @@ const Gallery = () => {
           />
         ))}
       </div>
+       <p>For more content, check out our <a href="https://www.instagram.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Instagram, </a></p>
+       <p> <a href="https://www.facebook.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer">Facebook</a> and <a href="https://www.tiktok.com/@funnylookingfacepaints" target="_blank" rel="noopener noreferrer">TikTok</a></p>
+      
      {selectedIndex !== null && (
   <div className="modal-overlay" onClick={closeModal}>
     <div className="modal-window" onClick={(e) => e.stopPropagation()}>

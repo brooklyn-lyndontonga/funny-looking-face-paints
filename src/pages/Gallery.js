@@ -1,3 +1,4 @@
+import '../stylesheets/Gallery.css';
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import placeholder1 from '../img/Logo/1.png';
 import placeholder2 from '../img/Logo/2.png';

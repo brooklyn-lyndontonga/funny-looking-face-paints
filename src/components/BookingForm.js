@@ -57,9 +57,13 @@ function BookingForm() {
           <label htmlFor="location">Location:</label>
           <input type="text" id="location" name="location" required />
           <br />
+          <button type="submit">Submit</button>
         </form>
       ) : (
-        <p>Thanks for submitting the form!</p>
+        <div className='container'>
+        <p>🎉Thanks for submitting the form!🥳</p>
+        <p>📩I'll be in touch soon.</p>
+        </div>
       )}
     </div>
   );

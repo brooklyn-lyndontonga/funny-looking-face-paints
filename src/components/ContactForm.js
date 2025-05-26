@@ -54,9 +54,14 @@ function ContactForm() {
             <label htmlFor="message">Message:</label>
             <textarea id="message" name="message" required />
           </div>
+
+          <button type="submit">Send</button>
         </form>
       ) : (
-        <p>Thanks for submitting the form!</p>
+        <div className='container'>
+        <p>📬 Thanks for your message!</p>
+        <p>I'll get back to you as soon as I can.</p>
+        </div>
       )}
     </div>
   );

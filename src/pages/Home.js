@@ -18,7 +18,7 @@ function Home() {
       <p>Bookings are now open, so secure your spot now!</p>
     </div>
     <div className='parent-container'>
-   <div class='container1x1'>
+   <div className='container1x1'>
   {/* about */}
   <h2>Meet the Funny Fullas Behind the Funny Face Paintings</h2>
   <p>Learn about what makes us Funny!</p> 

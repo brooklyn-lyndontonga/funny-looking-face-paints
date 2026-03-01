@@ -9,16 +9,21 @@ function ContactForm() {
 
     const form = e.target;
 
-    fetch("https://formsubmit.co/funnylooking4010@gmail.com", {
+    fetch("https://formsubmit.co/ajax/funnylooking4010@gmail.com", {
       method: "POST",
+      headers: {
+        "Accept": "application/json"
+      },
       body: new FormData(form),
     })
-      .then((response) => {
-        if (response.ok) {
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success === "true" || data.success === true) {
           setSubmitted(true);
           form.reset();
         } else {
-          alert("Oops! Something went wrong.");
+          console.error("FormSubmit error:", data);
+          alert("Oops! Something went wrong: " + (data.message || "Unknown error"));
         }
       })
       .catch((error) => {

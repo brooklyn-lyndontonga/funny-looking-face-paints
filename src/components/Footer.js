@@ -10,9 +10,9 @@ function Footer() {
           <h3>Funny Looking Face Paints</h3>
           <p>Where we make the funniest faces in Tairāwhiti.</p>
           <div style={{ marginTop: '1rem' }}>
-            <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
-            <a href="#" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
-            <a href="#" className="social-icon" aria-label="TikTok"><FaTiktok /></a>
+            <a href="https://www.instagram.com/funnylookingfacepaints/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
+            <a href="https://www.facebook.com/profile.php?id=61576253596992/" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
+            <a href="https://www.tiktok.com/@funnylookingfacep?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" className="social-icon" aria-label="TikTok"><FaTiktok /></a>
           </div>
         </div>
         

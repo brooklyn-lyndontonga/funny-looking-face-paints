@@ -74,7 +74,7 @@ function Policy() {
       <div className="section">
         <h2>🤝 Contact</h2>
         <p>
-          If you've got any questions or concerns, please don't hesitate to get in touch. You can reach me at <a href="mailto:funnylookingfacepaints@gmail.com">funnylookingfacepaints@gmail.com</a> or on <a href="https://www.facebook.com/funnylookingfacepaints/">Facebook</a>.
+          If you've got any questions or concerns, please don't hesitate to get in touch. You can reach me at <a href="mailto:funnylooking4010@gmail.com">funnylooking4010@gmail.com</a> or on <a href="https://www.facebook.com/funnylookingfacepaints/">Facebook</a>.
         </p>
       </div>
 

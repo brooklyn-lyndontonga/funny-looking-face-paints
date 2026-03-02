@@ -16,7 +16,7 @@ function About() {
         <h3><Link to="/policy">Policy</Link></h3>
         </div>
         <p className="paragraph">For more information, check out our <Link to="/contact">Contact</Link> page to send me a message,
-        or visit the <Link to="/calendar">Calendar</Link> to see when I'm available.
+        or visit the <Link to="/bookings">Bookings</Link> page to see when I'm available.
       </p>
       </div>
     </div>

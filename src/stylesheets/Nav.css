@@ -1,10 +1,7 @@
-/* Nav */
 .navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
-  flex-wrap: wrap;
 }
 
 .navbar ul {
@@ -14,7 +11,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 1rem;
 }
 
 .navbar li {
@@ -23,13 +20,21 @@
 
 .navbar a {
   text-decoration: none;
-  color: #333;
+  color: #555;
   font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 10px;
-  transition: background-color 0.3s ease;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  transition: all 0.3s ease;
 }
 
 .navbar a:hover {
-  background-color: var(--lavender); /* or use --accent-color */
+  background-color: var(--lavender); 
+  color: var(--black);
+  transform: translateY(-2px);
+}
+
+.navbar a.active {
+  background-color: var(--pink);
+  color: var(--white);
+  box-shadow: 0 4px 10px rgba(251, 182, 214, 0.4);
 }

@@ -6,8 +6,8 @@ import "../stylesheets/BookingForm.css";
 // Paste your Google Apps Script web app URL here (ends in /exec).
 // While this is empty, the form keeps working exactly as it does today
 // (email via FormSubmit), so it's safe to deploy this file right away.
-const WEBHOOK_URL = "";
-// Set to false once you trust the Zapier flow and no longer want the
+const WEBHOOK_URL = "https://script.google.com/macros/s/AKfycbwPQ01EGKzY6V6fq15mLi5fZIwLrmHLWHMwZAHOqteZTA8D8vkBaj_OjFqMmEp8-Q2eqg/exec";
+// Set to false once you trust the automation flow and no longer want the
 // plain FormSubmit email as a backup notification.
 const SEND_FORMSUBMIT_BACKUP = true;
 // ──────────────────────────────────────────────────────────────────

@@ -2,8 +2,19 @@ import React, { useState, useEffect } from "react";
 import { format } from "date-fns";
 import "../stylesheets/BookingForm.css";
 
+// ── AUTOMATION SETUP ──────────────────────────────────────────────
+// Paste your Google Apps Script web app URL here (ends in /exec).
+// While this is empty, the form keeps working exactly as it does today
+// (email via FormSubmit), so it's safe to deploy this file right away.
+const WEBHOOK_URL = "";
+// Set to false once you trust the Zapier flow and no longer want the
+// plain FormSubmit email as a backup notification.
+const SEND_FORMSUBMIT_BACKUP = true;
+// ──────────────────────────────────────────────────────────────────
+
 function BookingForm({ selectedDate }) {
   const [submitted, setSubmitted] = useState(false);
+  const [sending, setSending] = useState(false);
   const [dateValue, setDateValue] = useState("");
 
   useEffect(() => {
@@ -12,38 +23,66 @@ function BookingForm({ selectedDate }) {
     }
   }, [selectedDate]);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
+    const formData = new FormData(form);
+    setSending(true);
 
-    fetch("https://formsubmit.co/ajax/funnylooking4010@gmail.com", {
-      method: "POST",
-      headers: {
-        "Accept": "application/json"
-      },
-      body: new FormData(form),
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success === "true" || data.success === true) {
-          setSubmitted(true);
-          form.reset();
-        } else {
-          console.error("FormSubmit error:", data);
-          alert("Oops! Something went wrong: " + (data.message || "Unknown error"));
-        }
-      })
-      .catch((error) => {
-        console.error("Form error:", error);
-        alert("There was an error submitting the form.");
-      });
+    // Build a clean JSON payload for Zapier (webhooks parse JSON reliably)
+    const payload = Object.fromEntries(formData.entries());
+    payload.submittedAt = new Date().toISOString();
+
+    const requests = [];
+
+    if (WEBHOOK_URL) {
+      requests.push(
+        // text/plain avoids a CORS preflight, which Apps Script can't answer.
+        // The body is still JSON — the script parses it on the other end.
+        fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload),
+        })
+      );
+    }
+
+    if (!WEBHOOK_URL || SEND_FORMSUBMIT_BACKUP) {
+      requests.push(
+        fetch("https://formsubmit.co/ajax/funnylooking4010@gmail.com", {
+          method: "POST",
+          headers: { Accept: "application/json" },
+          body: formData,
+        })
+      );
+    }
+
+    try {
+      const results = await Promise.allSettled(requests);
+      const anySuccess = results.some(
+        (r) => r.status === "fulfilled" && r.value.ok
+      );
+
+      if (anySuccess) {
+        setSubmitted(true);
+        form.reset();
+      } else {
+        console.error("Booking submission failed:", results);
+        alert("Oops! Something went wrong sending your booking. Please try again or contact me directly.");
+      }
+    } catch (error) {
+      console.error("Form error:", error);
+      alert("There was an error submitting the form.");
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
     <div className="booking-form-container" style={{ margin: 0, width: '100%', maxWidth: 'none', border: 'none', boxShadow: 'none' }}>
       {!submitted ? (
         <form onSubmit={handleSubmit}>
-          {/* Honeypot for bots */}
+          {/* Honeypot for bots — also sent to Zapier so a Filter step can drop spam */}
           <input type="text" name="_honey" style={{ display: "none" }} />
           <input type="hidden" name="_captcha" value="false" />
 
@@ -79,7 +118,9 @@ function BookingForm({ selectedDate }) {
           <label htmlFor="message">Tell me about your event:</label>
           <textarea id="message" name="message" rows="4" required></textarea>
 
-          <button type="submit" className="button" style={{marginTop: '20px'}}>Submit Request</button>
+          <button type="submit" className="button" style={{marginTop: '20px'}} disabled={sending}>
+            {sending ? "Sending..." : "Submit Request"}
+          </button>
         </form>
       ) : (
         <div style={{textAlign: 'center', padding: '40px 20px'}}>
